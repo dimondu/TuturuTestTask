@@ -7,14 +7,25 @@
 
 import UIKit
 
-class CharacterCell: UITableViewCell {
+final class CharacterCell: UITableViewCell {
     
     @IBOutlet weak var characterImage: UIImageView!
     
     @IBOutlet weak var characterNameLabel: UILabel!
     
     
-    func configure(with data: Data) {
+    func configure(with data: DataCharacter) {
         characterNameLabel.text = data.name
+        
+        
+        NetworkManager.shared.fetchImage(from: data.imageUrl) { [weak self] imageData in
+            switch imageData {
+            case .success(let image):
+                self?.characterImage.image = UIImage(data: image)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
+
 }

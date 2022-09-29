@@ -13,13 +13,13 @@ enum Link: String {
 }
 
 struct Character: Decodable {
-    let data: [Data]
+    let data: [DataCharacter]
     let count: Int
     let totalPages: Int
     let nextPage: String
 }
 
-struct Data: Decodable {
+struct DataCharacter: Decodable {
     let films: [String]
     let shortFilms: [String]
     let tvShows: [String]

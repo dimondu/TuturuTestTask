@@ -19,8 +19,8 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchCharacter(url: String?, completion: @escaping(Result<Character, NetworkError>) -> Void) {
-        guard let urlString = url, let url = URL(string: urlString) else {
+    func fetchCharacter(url: String, completion: @escaping(Result<Character, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
             completion(.failure(.invalidUrl))
             return
         }
@@ -42,5 +42,21 @@ class NetworkManager {
                 completion(.failure(.decodingError))
             }
         }.resume()
+    }
+    
+    func fetchImage(from url: String, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidUrl))
+            return
+        }
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else {
+                completion(.failure(.noData))
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(imageData))
+            }
+        }   
     }
 }

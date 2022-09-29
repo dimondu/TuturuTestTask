@@ -11,7 +11,7 @@ final class MainViewController: UITableViewController {
     
     // MARK: - Private ptoperties
     
-    private var characters: [Data] = []
+    private var characters: [DataCharacter] = []
     
     // MARK: - Override methods
     
@@ -42,6 +42,10 @@ final class MainViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        150
+    }
 }
 
 // MARK: - Networking
@@ -58,4 +62,6 @@ extension MainViewController {
             }
         }
     }
+    
 }
+

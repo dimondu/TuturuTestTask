@@ -9,26 +9,24 @@ import Foundation
 
 enum Link: String {
     
-    case memesURL =  "https://api.disneyapi.dev/characters"
+    case characterURL = "https://api.disneyapi.dev/characters"
 }
 
-struct Character {
+struct Character: Decodable {
     let data: [Data]
     let count: Int
     let totalPages: Int
-    let nextPages: String
+    let nextPage: String
 }
 
-struct Data {
+struct Data: Decodable {
     let films: [String]
     let shortFilms: [String]
     let tvShows: [String]
     let videoGames: [String]
     let parkAttractions: [String]
-    let allies: [String]
-    let enemies: [String]
-    let id: Int
     let name: String
     let imageUrl: String
     let url: String
 }
+

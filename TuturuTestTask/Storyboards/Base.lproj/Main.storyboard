@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Disney Character-->
         <scene sceneID="0kq-wk-G7X">
             <objects>
                 <tableViewController id="GQX-eh-a8r" customClass="MainViewController" customModule="TuturuTestTask" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GEz-2G-4b2">
                                                     <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-Ad-bf7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-Ad-bf7">
                                                     <rect key="frame" x="124" y="0.0" width="234" height="104"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -45,6 +45,10 @@
                                         <constraint firstAttribute="bottom" secondItem="ZIx-Vm-XSA" secondAttribute="bottom" constant="8" id="y05-Hx-ryx"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="characterImage" destination="GEz-2G-4b2" id="VHQ-W0-56J"/>
+                                    <outlet property="characterNameLabel" destination="cW4-Ad-bf7" id="FGS-Ac-bEO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,7 +56,7 @@
                             <outlet property="delegate" destination="GQX-eh-a8r" id="nQf-5M-wUC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="wQO-zo-oFK"/>
+                    <navigationItem key="navigationItem" title="Disney Character" id="wQO-zo-oFK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IE-fJ-moE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

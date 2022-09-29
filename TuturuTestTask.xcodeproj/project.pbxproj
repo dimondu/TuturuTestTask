@@ -16,6 +16,7 @@
 		F4EFCD8428E477AF007A9D59 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F4EFCD8328E477AF007A9D59 /* .gitignore */; };
 		F4EFCD8F28E48BC9007A9D59 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFCD8E28E48BC9007A9D59 /* Character.swift */; };
 		F4EFCD9228E48CFF007A9D59 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFCD9128E48CFF007A9D59 /* CharacterCell.swift */; };
+		F4EFCD9528E4A89D007A9D59 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFCD9428E4A89D007A9D59 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F4EFCD8328E477AF007A9D59 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F4EFCD8E28E48BC9007A9D59 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		F4EFCD9128E48CFF007A9D59 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		F4EFCD9428E4A89D007A9D59 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		F4EFCD6E28E47740007A9D59 /* TuturuTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				F4EFCD9328E4A887007A9D59 /* NetworkManager */,
 				F4EFCD9028E48CDA007A9D59 /* Cells */,
 				F4EFCD8928E485F5007A9D59 /* Models */,
 				F4EFCD8628E47875007A9D59 /* ViewControllers */,
@@ -122,6 +125,14 @@
 				F4EFCD9128E48CFF007A9D59 /* CharacterCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F4EFCD9328E4A887007A9D59 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFCD9428E4A89D007A9D59 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EFCD9528E4A89D007A9D59 /* NetworkManager.swift in Sources */,
 				F4EFCD9228E48CFF007A9D59 /* CharacterCell.swift in Sources */,
 				F4EFCD7428E47740007A9D59 /* MainViewController.swift in Sources */,
 				F4EFCD7028E47740007A9D59 /* AppDelegate.swift in Sources */,

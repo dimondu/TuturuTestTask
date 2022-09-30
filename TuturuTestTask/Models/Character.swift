@@ -21,10 +21,8 @@ struct Character: Decodable {
 
 struct DataCharacter: Decodable {
     let films: [String]
-    let shortFilms: [String]
     let tvShows: [String]
     let videoGames: [String]
-    let parkAttractions: [String]
     let name: String
     let imageUrl: String
     let url: String

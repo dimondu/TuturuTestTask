@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F47BFD6628E6FDF50010885D /* DisneyPark.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F47BFD6528E6FDF40010885D /* DisneyPark.ttf */; };
+		F4ACB63728E70841008EE311 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACB63628E70841008EE311 /* DetailViewController.swift */; };
 		F4EFCD7028E47740007A9D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFCD6F28E47740007A9D59 /* AppDelegate.swift */; };
 		F4EFCD7228E47740007A9D59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFCD7128E47740007A9D59 /* SceneDelegate.swift */; };
 		F4EFCD7428E47740007A9D59 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFCD7328E47740007A9D59 /* MainViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F47BFD6528E6FDF40010885D /* DisneyPark.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DisneyPark.ttf; sourceTree = "<group>"; };
+		F4ACB63628E70841008EE311 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F4EFCD6C28E47740007A9D59 /* TuturuTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuturuTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EFCD6F28E47740007A9D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4EFCD7128E47740007A9D59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F47BFD6428E6FDDE0010885D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F47BFD6528E6FDF40010885D /* DisneyPark.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F4EFCD6328E47740007A9D59 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F4EFCD7328E47740007A9D59 /* MainViewController.swift */,
+				F4ACB63628E70841008EE311 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +119,7 @@
 		F4EFCD8828E4788E007A9D59 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F47BFD6428E6FDDE0010885D /* Fonts */,
 				F4EFCD7828E47742007A9D59 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -197,6 +211,7 @@
 				F4EFCD7C28E47742007A9D59 /* LaunchScreen.storyboard in Resources */,
 				F4EFCD7928E47742007A9D59 /* Assets.xcassets in Resources */,
 				F4EFCD7728E47740007A9D59 /* Main.storyboard in Resources */,
+				F47BFD6628E6FDF50010885D /* DisneyPark.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +228,7 @@
 				F4EFCD7028E47740007A9D59 /* AppDelegate.swift in Sources */,
 				F4EFCD7228E47740007A9D59 /* SceneDelegate.swift in Sources */,
 				F4EFCD8F28E48BC9007A9D59 /* Character.swift in Sources */,
+				F4ACB63728E70841008EE311 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

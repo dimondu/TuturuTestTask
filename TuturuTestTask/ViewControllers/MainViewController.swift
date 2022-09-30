@@ -46,17 +46,34 @@ final class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
     }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        detailVC.character = characters[indexPath.row]
+    }
+    
+    
 }
+
 
 // MARK: - Networking
 
 extension MainViewController {
     private func fetchData() {
-        NetworkManager.shared.fetchCharacter(url: Link.characterURL.rawValue) { result in
+        NetworkManager.shared.fetchCharacter(url: Link.characterURL.rawValue) { [weak self] result in
             switch result {
             case .success(let character):
-                self.characters = character.data
-                self.tableView.reloadData()
+                self?.characters = character.data
+                self?.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
             }

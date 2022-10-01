@@ -75,14 +75,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-hV-z0z">
                                 <rect key="frame" x="16" y="163" width="361" height="647"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-QO-TAX">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-QO-TAX">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="323.66666666666669"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l0q-gP-qNE">
-                                                <rect key="frame" x="0.0" y="0.0" width="361" height="286"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="298.33333333333331"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4D-2b-ocK">
-                                                <rect key="frame" x="0.0" y="293" width="361" height="30.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="305.33333333333331" width="361" height="18.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -129,6 +129,8 @@
                         <outlet property="characterImage" destination="l0q-gP-qNE" id="gHM-qE-ZvW"/>
                         <outlet property="filmsLabel" destination="2hF-iE-Dhw" id="qn0-Zl-orD"/>
                         <outlet property="nameLabel" destination="s4D-2b-ocK" id="xpQ-fa-8mZ"/>
+                        <outlet property="tvShowsLabel" destination="Ngr-s5-oy6" id="JjB-Av-Ho7"/>
+                        <outlet property="videoGamesLabel" destination="Hju-O1-Ng4" id="Uge-rc-Reu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bul-rB-VMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

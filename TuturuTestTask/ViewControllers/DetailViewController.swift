@@ -14,25 +14,32 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var characterImage: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var filmsLabel: UILabel!
+    @IBOutlet weak var videoGamesLabel: UILabel!
+    @IBOutlet weak var tvShowsLabel: UILabel!
     
     // MARK: - Public properties
     
     var character: DataCharacter!
-    
     
     // MARK: - Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchImage()
+        setLabels()
+    }
+    
+    //MARK: - Private methods
+    
+    private func setLabels() {
         nameLabel.text = character.name
-        
-        
         filmsLabel.text = character.films.isEmpty
-        ? "No films" : "Films \(character.films.joined(separator: ", "))"
-        
+        ? "С этим персонажем нет фильмов" : "Фильмы: \(character.films.joined(separator: ", "))"
+        videoGamesLabel.text = character.videoGames.isEmpty
+        ? "С этим персонажем нет видео игр" : "Видео игры: \(character.videoGames.joined(separator: ", "))"
+        tvShowsLabel.text = character.tvShows.isEmpty
+        ? "С этим персонажем нет ТВ шоу" : "ТВ шоу: \(character.tvShows.joined(separator: ", "))"
     }
 }
 
@@ -50,10 +57,3 @@ extension DetailViewController {
         }
     }
 }
-//        """
-//            Фильмы: \(character.films.joined(separator: ", "))
-//            Короткометражные фильмы: \(character.shortFilms.joined(separator: ", "))
-//            ТВ шоу: \(character.tvShows.joined(separator: ", "))
-//            Видеоигры: \(character.videoGames.joined(separator: ", "))
-//            Парки аттракционов: \(character.parkAttractions.joined(separator: ", "))
-//            """

@@ -36,7 +36,7 @@ final class MainViewController: UITableViewController {
         else {
             return UITableViewCell()
         }
-        
+       
         let character = characters[indexPath.row]
         cell.configure(with: character)
         
@@ -44,7 +44,7 @@ final class MainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        100
     }
     
     // MARK: - Table view delegate
@@ -59,11 +59,8 @@ final class MainViewController: UITableViewController {
         guard let detailVC = segue.destination as? DetailViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         detailVC.character = characters[indexPath.row]
-    }
-    
-    
+    }   
 }
-
 
 // MARK: - Networking
 
@@ -79,6 +76,5 @@ extension MainViewController {
             }
         }
     }
-    
 }
 

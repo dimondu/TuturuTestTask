@@ -24,14 +24,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZIx-Vm-XSA">
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZIx-Vm-XSA">
                                             <rect key="frame" x="16" y="8" width="361" height="104"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GEz-2G-4b2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="104"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GEz-2G-4b2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="j6d-K8-Lay"/>
+                                                        <constraint firstAttribute="height" constant="100" id="kyl-dR-7zA"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-Ad-bf7">
-                                                    <rect key="frame" x="190.66666666666663" y="0.0" width="170.33333333333337" height="104"/>
+                                                    <rect key="frame" x="120" y="0.0" width="241" height="104"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,7 +82,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-QO-TAX">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="323.66666666666669"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l0q-gP-qNE">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l0q-gP-qNE">
                                                 <rect key="frame" x="0.0" y="0.0" width="361" height="298.33333333333331"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4D-2b-ocK">

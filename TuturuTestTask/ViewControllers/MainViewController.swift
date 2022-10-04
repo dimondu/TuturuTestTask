@@ -39,6 +39,7 @@ final class MainViewController: UITableViewController {
        
         let character = characters[indexPath.row]
         cell.configure(with: character)
+
         
         return cell
     }

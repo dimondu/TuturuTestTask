@@ -26,6 +26,7 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        characterImage.layer.cornerRadius = 20
         fetchImage()
         setLabels()
     }

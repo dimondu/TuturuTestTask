@@ -12,9 +12,12 @@ final class CharacterCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
     
+    
+    
     func configure(with data: DataCharacter) {
         characterNameLabel.font = UIFont(name: "DisneyPark", size: 32)
         characterNameLabel.text = data.name
+        characterImage.layer.cornerRadius = 20
         
         getImage(from: data.imageUrl) { [weak self] result in
             switch result {

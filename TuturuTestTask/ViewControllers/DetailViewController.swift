@@ -22,11 +22,16 @@ final class DetailViewController: UIViewController {
     
     var character: DataCharacter!
     
+    // MARK: - Private properties
+    
+    private var activityIndicator: UIActivityIndicatorView?
+    
     // MARK: - Override methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         characterImage.layer.cornerRadius = 20
+        activityIndicator = ActivityIndicator.showSpinner(in: characterImage)
         fetchImage()
         setLabels()
     }
@@ -37,8 +42,10 @@ final class DetailViewController: UIViewController {
         nameLabel.text = character.name
         filmsLabel.text = character.films.isEmpty
         ? "С этим персонажем нет фильмов" : "Фильмы: \(character.films.joined(separator: ", "))"
+        
         videoGamesLabel.text = character.videoGames.isEmpty
         ? "С этим персонажем нет видео игр" : "Видео игры: \(character.videoGames.joined(separator: ", "))"
+        
         tvShowsLabel.text = character.tvShows.isEmpty
         ? "С этим персонажем нет ТВ шоу" : "ТВ шоу: \(character.tvShows.joined(separator: ", "))"
     }
@@ -52,6 +59,7 @@ extension DetailViewController {
             switch result {
             case .success(let imageData):
                 self?.characterImage.image = UIImage(data: imageData)
+                self?.activityIndicator?.stopAnimating()
             case .failure(let error):
                 print(error.localizedDescription)
             }

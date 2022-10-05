@@ -25,6 +25,5 @@ struct DataCharacter: Decodable {
     let videoGames: [String]
     let name: String
     let imageUrl: String
-    let url: String
 }
 

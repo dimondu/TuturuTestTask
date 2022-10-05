@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F467B1D728EDBDF80060B834 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467B1D628EDBDF80060B834 /* ActivityIndicator.swift */; };
 		F47BFD6628E6FDF50010885D /* DisneyPark.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F47BFD6528E6FDF40010885D /* DisneyPark.ttf */; };
 		F4ACB63728E70841008EE311 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACB63628E70841008EE311 /* DetailViewController.swift */; };
 		F4EFCD7028E47740007A9D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFCD6F28E47740007A9D59 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F467B1D628EDBDF80060B834 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		F47BFD6528E6FDF40010885D /* DisneyPark.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DisneyPark.ttf; sourceTree = "<group>"; };
 		F4ACB63628E70841008EE311 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F4EFCD6C28E47740007A9D59 /* TuturuTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuturuTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				F4EFCD9328E4A887007A9D59 /* Services */,
-				F4EFCD9028E48CDA007A9D59 /* Cells */,
+				F4EFCD9028E48CDA007A9D59 /* Views */,
 				F4EFCD8928E485F5007A9D59 /* Models */,
 				F4EFCD8628E47875007A9D59 /* ViewControllers */,
 				F4EFCD8728E47883007A9D59 /* Storyboards */,
@@ -135,12 +137,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		F4EFCD9028E48CDA007A9D59 /* Cells */ = {
+		F4EFCD9028E48CDA007A9D59 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				F4EFCD9128E48CFF007A9D59 /* CharacterCell.swift */,
+				F467B1D628EDBDF80060B834 /* ActivityIndicator.swift */,
 			);
-			path = Cells;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F4EFCD9328E4A887007A9D59 /* Services */ = {
@@ -232,6 +235,7 @@
 				F4FF262028E854E500180B81 /* ImageCacheManager.swift in Sources */,
 				F4EFCD7228E47740007A9D59 /* SceneDelegate.swift in Sources */,
 				F4EFCD8F28E48BC9007A9D59 /* Character.swift in Sources */,
+				F467B1D728EDBDF80060B834 /* ActivityIndicator.swift in Sources */,
 				F4ACB63728E70841008EE311 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

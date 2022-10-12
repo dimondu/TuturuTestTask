@@ -41,7 +41,7 @@ final class CharacterCell: UITableViewCell {
                 self?.characterImage.image = image
                 self?.activityIndicator?.stopAnimating()
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
@@ -49,15 +49,10 @@ final class CharacterCell: UITableViewCell {
     // MARK: - Private methods
     
     private func getImage(from url: String, completion: @escaping(Result<UIImage, Error>) -> Void) {
-        if let cachedImage = ImageCacheManager.shared.object(forKey: url as NSString) {
-            completion(.success(cachedImage))
-            return
-        }
         NetworkManager.shared.fetchImage(from: url) { result in
             switch result {
             case .success(let imageData):
                 guard let uiImage = UIImage(data: imageData) else { return }
-                ImageCacheManager.shared.setObject(uiImage, forKey: url as NSString)
                 completion(.success(uiImage))
                 
             case .failure(let error):

@@ -6,24 +6,39 @@
 //
 
 import Foundation
+import RealmSwift
 
 enum Link: String {
     
     case characterURL = "https://api.disneyapi.dev/characters"
 }
 
-struct Character: Decodable {
-    let data: [DataCharacter]
-    let count: Int
-    let totalPages: Int
-    let nextPage: String
+class Character: Object, Codable {
+    @Persisted var data: List<DataCharacter>
+    @Persisted var count: Int
+    @Persisted var totalPages: Int
+    @Persisted var nextPage: String
+    
+    convenience init(data: List<DataCharacter>) {
+        self.init()
+        self.data = data
+    }
 }
 
-struct DataCharacter: Decodable {
-    let films: [String]
-    let tvShows: [String]
-    let videoGames: [String]
-    let name: String
-    let imageUrl: String
+class DataCharacter: Object, Codable {
+    @Persisted var films: List<String>
+    @Persisted var tvShows: List<String>
+    @Persisted var videoGames: List<String>
+    @Persisted var name: String
+    @Persisted var imageUrl: String
+    
+    convenience init(films: List<String>, tvShows: List<String>, videoGames: List<String>, name: String, imageUrl: String) {
+        self.init()
+        self.films = films
+        self.tvShows = tvShows
+        self.videoGames = videoGames
+        self.name = name
+        self.imageUrl = imageUrl
+    }
 }
 

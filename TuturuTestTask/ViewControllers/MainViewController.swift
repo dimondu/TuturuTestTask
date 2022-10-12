@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class MainViewController: UITableViewController {
     
     // MARK: - Private ptoperties
     
-    private var characters: [DataCharacter] = []
-    
+    private var characters: Results<DataCharacter>!
+    private var disneyCharacter: Character!
     // MARK: - Override methods
     
     override func viewDidLoad() {
@@ -65,12 +66,21 @@ extension MainViewController {
         NetworkManager.shared.fetchCharacter(url: Link.characterURL.rawValue) { [weak self] result in
             switch result {
             case .success(let character):
-                self?.characters = character.data
+                if (((self?.characters.isEmpty)) != nil) {
+                    try! realm.write {
+                        characters = realm.objects(character.data)
+                    }
+                }  else {
+                    StorageManager.saveObject(character)
+                }
                 self?.tableView.reloadData()
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
 }
+
+
 
